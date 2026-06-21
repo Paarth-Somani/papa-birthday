@@ -1,0 +1,132 @@
+PAPA'S PHOTOS - MANIFEST
+=======================
+
+All 54 images have been renamed and organized.
+Download the papa_photos/ folder and drag all images into:
+  /public/images/
+
+They're already sorted by upload time and pre-named for the site.
+
+PHOTO MANIFEST BY CATEGORY:
+===========================
+
+EARLY YEARS (childhood, young family)
+-------------------------------------
+1.  young_dad_anu_siblings.jpg      → Dad with Anu and family
+2.  young_dad_kids_toddlers.jpg     → Dad with Parth, Aryamann, Tvesha (young)
+3.  kids_home_candid_01.jpg         → Kids at home
+4.  kids_home_candid_02.jpg         → Another home moment
+5.  kids_birthday_celebration.jpg   → Birthday or celebration
+6.  kids_festival_moment.jpg        → Festival or festive setting
+
+HOME & INTIMATE (daily life)
+-----------------------------
+7.  home_garden_family_play.jpg     → Garden, family playing
+8.  home_kids_bonding.jpg           → Kids bonding with dad
+9.  home_bedroom_kids.jpg           → Bedroom, cosy moment
+10. home_living_room_family.jpg     → Living room, family together
+11. home_garden_holi_celebration.jpg → Holi at home
+
+FAMILY GROUPS (all together)
+----------------------------
+12. family_four_together.jpg        → All five (or four + one taking photo)
+13. family_extended_celebration.jpg → Extended family gathering
+14. family_huddle_candid.jpg        → Family huddle, candid
+15. siblings_moment.jpg             → Just the three kids
+16. parents_kids_formal.jpg         → Parents with kids, formal
+
+COUPLE (Pravveen & Anu)
+-----------------------
+17. couple_anniversary_celebration.jpg → Anniversary moment
+18. couple_date_night.jpg           → Date night or evening together
+19. couple_formal_event.jpg         → Formal event, dressed up
+20. couple_beach_romantic.jpg       → Beach or water setting
+
+INTERNATIONAL TRAVEL
+-------------------
+21. prague_couple_romantic.jpg      → Prague, just the two
+22. switzerland_rhine_family.jpg    → Rhine Falls, Switzerland
+23. scotland_landscape_family.jpg   → Scottish Highlands
+24. scotland_waterfall_adventure.jpg → Scotland waterfall
+25. kenya_safari_sunrise.jpg        → Maasai Mara sunrise
+26. kenya_safari_group.jpg          → Safari with family
+27. mauritius_beach_couple.jpg      → Mauritius or beach destination
+28. barcelona_city_family.jpg       → Barcelona exploring
+29. barcelona_old_town_group.jpg    → Barcelona Old Town, group
+30. barcelona_street_moment.jpg     → Barcelona street/doorway
+
+WEDDINGS & CELEBRATIONS
+-----------------------
+31. wedding_traditional_family.jpg  → Wedding, traditional attire
+32. wedding_ceremony_moment.jpg     → Wedding ceremony
+33. wedding_groom_formal.jpg        → Groom portrait
+34. sangeet_celebration_family.jpg  → Sangeet night
+35. holi_confetti_celebration.jpg   → Holi with colors/petals
+36. diwali_festive_family.jpg       → Diwali or festival celebration
+37. ceremony_sacred_moment.jpg      → Religious/sacred ceremony
+
+PROFESSIONAL & CORPORATE
+------------------------
+38. iwl_office_dad_son.jpg          → IWL office with son
+39. iwl_office_dad_formal.jpg       → IWL office formal portrait
+40. military_uniform_brothers.jpg   → Military/NCC uniform, brothers
+41. business_event_formal.jpg       → Business event or formal gathering
+42. charging_station_event.jpg      → EV charging event or similar
+
+INDIVIDUAL KIDS (portraits)
+---------------------------
+43. parth_solo_portrait.jpg         → Parth portrait
+44. aryamann_solo_portrait.jpg      → Aryamann portrait
+45. tvesha_solo_portrait.jpg        → Tvesha portrait
+46. parth_teenage_formal.jpg        → Parth as teenager
+47. aryamann_young_moment.jpg       → Aryamann candid
+48. tvesha_celebration_dress.jpg    → Tvesha dressed up
+
+ACHIEVEMENTS & MILESTONES
+--------------------------
+49. dream_run_trophy_family.jpg     → Dream Run with trophy
+50. graduation_moment.jpg           → Graduation or milestone
+51. award_celebration.jpg           → Award or achievement
+
+SPECIAL MOMENTS (travel/experiences)
+------------------------------------
+52. boat_yacht_moment.jpg           → Boat/yacht experience
+53. dubai_marina_couple.jpg         → Dubai marina or similar
+54. nightclub_celebration.jpg       → Evening/nightlife celebration
+
+PHOTO CATEGORIES IN SITE:
+=========================
+When you download and place all 54 images in /public/images/, the site will 
+automatically organize them across these gallery chapters:
+
+1. The Early Years (6 photos)
+2. The World with Him (10 photos)
+3. The Big Moments (7 photos)
+4. Just At Home (5 photos)
+5. Him & Her (4 photos)
+6. The Builder (5 photos)
+7. The Three of Them (6 photos)
+8. All Five (5 photos)
+9. The Wins (3 photos)
+
+HERO COLLAGE (featured on landing):
+===================================
+Uses these 6 images rotated on the hero:
+- kenya_safari_sunrise.jpg
+- family_extended_celebration.jpg
+- switzerland_rhine_family.jpg
+- wedding_traditional_family.jpg
+- young_dad_kids_toddlers.jpg
+- prague_couple_romantic.jpg
+
+NEXT STEPS:
+===========
+1. Download papa_photos/ folder
+2. Extract all 54 images
+3. Drag into /public/images/ in your repo
+4. Commit & push
+5. Vercel redeploys in ~90 seconds
+6. Site is live!
+
+File size notes: All JPEG/PNG optimized for web.
+If any image doesn't load, check the filename matches photos.js exactly.

@@ -5,55 +5,45 @@ import { chapters } from '@/lib/photos';
 
 // portrait-oriented files get a taller tile
 const portraits = new Set([
-  'young_dad_kids_01.jpg',
-  'pacific_cultural_family.jpg',
+  'young_dad_kids_toddlers.jpg',
+  'barcelona_city_family.jpg',
+  'barcelona_old_town_group.jpg',
   'safari_family_sunrise.jpg',
-  'barcelona_solo_family_01.jpg',
-  'barcelona_family_02.jpg',
-  'wedding_tent_group.jpg',
-  'bride_family_red.jpg',
-  'anniversary_kiss.jpg',
-  'selfie_4_kids.jpg',
-  'prague_couple_01.jpg',
-  'barcelona_extfamily_02.jpg',
+  'wedding_traditional_family.jpg',
+  'prague_couple_romantic.jpg',
+  'parth_solo_portrait.jpg',
+  'aryamann_solo_portrait.jpg',
+  'tvesha_solo_portrait.jpg',
 ]);
 
 export default function Gallery() {
   const [active, setActive] = useState(null);
 
+  // Flatten all photos from all chapters into one continuous stream
+  const allPhotos = chapters.flatMap((ch) => ch.photos);
+
   return (
     <>
-      {chapters.map((ch) => (
-        <div className="chapter" key={ch.id}>
+      <div className="continuous-gallery">
+        {allPhotos.map((p, i) => (
           <motion.div
-            className="chapter-head"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: '-60px' }}
-            transition={{ duration: 0.6 }}
+            key={`${p.src}-${i}`}
+            className={`tile ${portraits.has(p.src) ? 'portrait' : ''}`}
+            initial={{ opacity: 0, scale: 0.94 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true, margin: '-40px' }}
+            transition={{
+              duration: 0.55,
+              delay: Math.min(i * 0.03, 0.2),
+              ease: [0.16, 1, 0.3, 1],
+            }}
+            onClick={() => setActive(p)}
           >
-            <h3>{ch.label}</h3>
-            <span className="note">{ch.note}</span>
+            <img src={`/images/${p.src}`} alt={p.cap} loading="lazy" />
+            <span className="cap">{p.cap}</span>
           </motion.div>
-
-          <div className="chapter-grid">
-            {ch.photos.map((p, i) => (
-              <motion.div
-                key={p.src}
-                className={`tile ${portraits.has(p.src) ? 'portrait' : ''}`}
-                initial={{ opacity: 0, scale: 0.94 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true, margin: '-40px' }}
-                transition={{ duration: 0.55, delay: Math.min(i * 0.06, 0.4), ease: [0.16, 1, 0.3, 1] }}
-                onClick={() => setActive(p)}
-              >
-                <img src={`/images/${p.src}`} alt={p.cap} loading="lazy" />
-                <span className="cap">{p.cap}</span>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      ))}
+        ))}
+      </div>
 
       {active && (
         <motion.div

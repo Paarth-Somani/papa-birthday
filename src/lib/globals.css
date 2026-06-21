@@ -509,11 +509,33 @@ main {
 .tone-forest { --tone-color: var(--forest); }
 
 /* GALLERY */
-.continuous-gallery {
+.chapter {
+  margin-bottom: 80px;
+}
+
+.chapter-head {
+  margin-bottom: 40px;
+}
+
+.chapter-head h3 {
+  font-family: 'Fraunces', serif;
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: var(--text-dark);
+}
+
+.chapter-head .note {
+  font-size: 16px;
+  color: var(--text-light);
+  font-style: italic;
+}
+
+.chapter-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-  gap: 12px;
-  margin-bottom: 60px;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 16px;
+  margin-bottom: 40px;
 }
 
 .tile {

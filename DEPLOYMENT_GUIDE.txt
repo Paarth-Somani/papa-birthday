@@ -1,0 +1,118 @@
+PAPA'S BIRTHDAY TRIBUTE SITE - DEPLOYMENT GUIDE
+==============================================
+
+STATUS: 5 files enhanced and ready to drop into your repo
+TIME TO DEPLOY: 15 minutes
+DEADLINE: His birthday is in ~5 hours
+
+WHAT CHANGED:
+- content.js: Complete rewrite from Parth's POV (18 milestones, 6 values)
+- Timeline.js: Dynamic winding SVG path, bouncing spring animations, feature card highlights
+- globals.css: Popping colors, smooth animations, responsive mobile design
+- photos.js: Organized by era (9 chapters), ready for your image filenames
+- IMAGE_RENAMING_GUIDE.txt: 54 photos organized with suggested names
+
+STEP 1: RENAME YOUR PHOTOS (10 minutes)
+======================================
+1. Download all 54 images from this chat
+2. Use IMAGE_RENAMING_GUIDE.txt to rename them
+3. Examples:
+   - WhatsApp_Image_2026-06-21_at_20_34_23.jpeg → young_dad_anu_siblings.jpg
+   - WhatsApp_Image_2026-06-21_at_20_34_34.jpeg → young_dad_kids_toddlers.jpg
+   - etc.
+
+STEP 2: UPDATE YOUR GITHUB REPO (5 minutes)
+==========================================
+1. Delete these files from your papa-birthday repo:
+   ✗ src/lib/content.js
+   ✗ src/components/Timeline.js
+   ✗ src/app/globals.css
+   ✗ src/lib/photos.js
+
+2. Replace with the new ones from /outputs/:
+   ✓ src/lib/content.js
+   ✓ src/components/Timeline.js
+   ✓ src/app/globals.css
+   ✓ src/lib/photos.js
+
+3. Add your renamed photos to:
+   ✓ public/images/young_dad_anu_siblings.jpg
+   ✓ public/images/young_dad_kids_toddlers.jpg
+   ✓ ... (all 54)
+
+4. Commit:
+   git add .
+   git commit -m "feat: enhanced timeline, new photography, rewritten copy from Parth's POV"
+   git push
+
+STEP 3: VERCEL REDEPLOYS AUTOMATICALLY (2 minutes)
+=================================================
+Once you push to main, Vercel detects changes and redeploys in ~90 seconds.
+Your site papa-birthday.vercel.app updates live.
+
+WHAT LOOKS DIFFERENT NOW:
+========================
+✨ Dynamic winding timeline spine (SVG path with gradient)
+✨ Cards bounce in with spring animations
+✨ Feature card (2008 pivot) has rose highlight + accent label
+✨ All copy rewritten as Parth speaking (no em-dashes, super human)
+✨ 18 milestones (1977 birth → today)
+✨ 6 values (lessons learned, not corporate nonsense)
+✨ 9 photo chapters organized by era
+✨ Popping gradient colors (gold, rose, forest, navy)
+✨ Smooth scroll-reveal animations throughout
+✨ Mobile-responsive at all breakpoints
+✨ Confetti still fires on scroll to finale
+
+TIMELINE MILESTONES NOW INCLUDE:
+================================
+1977 - The beginning (born in Sri Dungargarh)
+1987-1990 - GD Birla Memorial School
+1990-1995 - Modern School
+1997-1999 - Bond University, Australia (BBA)
+2000-2001 - Thunderbird School (MBA)
+2002-2003 - Balaji Export Co (first swing)
+2003 - Inland World Logistics (rebuilding family business)
+2005 - Tvesha arrives
+2008 - InCity Express (the pivot moment ★ FEATURE ★)
+2009 - Parth born, Anu by his side
+2010-2015 - Building it back, bigger
+2011 - Aryamann completes the picture
+2018-2020 - Looking at green
+2020+ - Enviiiro Wheels Mobility
+2020s - SG Maart
+2022 - The book called Resolve
+2023-2026 - The years of both (3 companies + 3 kids)
+Today - Another birthday, same resolve
+
+IF SOMETHING BREAKS:
+===================
+1. Check that all image filenames in photos.js match /public/images/
+2. Make sure you ran npm install (framer-motion, lucide-react must be installed)
+3. Clear Vercel cache and redeploy (Vercel dashboard → Deployments → Redeploy)
+4. Check browser console (F12) for any JS errors
+
+FINAL TOUCHES (OPTIONAL):
+==========================
+- If you want to add your own business photos (IWL, Enviiiro Wheels):
+  1. Add them to /public/images/
+  2. Update photos.js with their names
+  3. Push again
+
+- If you want to customize any text:
+  1. Edit src/lib/content.js (milestones or values)
+  2. Push
+
+TIMELINE:
+=========
+Now: Files ready
++5 min: Photos renamed & in /public/images/
++10 min: Files swapped in repo
++12 min: Git push
++14 min: Vercel redeploys
++15 min: Site is live and perfect
+
+HIS BIRTHDAY IS IN ~5 HOURS
+LET'S MAKE THIS HAPPEN!
+
+Questions? Check the README in the repo or search Vercel docs if deployment stalls.
