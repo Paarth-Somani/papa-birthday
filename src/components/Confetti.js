@@ -4,7 +4,7 @@ import { useEffect, useRef, forwardRef, useImperativeHandle } from 'react';
 const Confetti = forwardRef(function Confetti(_, ref) {
   const canvasRef = useRef(null);
   const piecesRef = useRef([]);
-  const colors = ['#ffc24b', '#ff9e2c', '#ff5d73', '#d6336c', '#3ddc97', '#fff6e9'];
+  const colors = ['#19f0ff', '#7af6ff', '#ff2bd0', '#a35cff', '#b6ff36', '#ffffff'];
 
   useImperativeHandle(ref, () => ({
     burst(x, y, count = 150) {
@@ -46,10 +46,13 @@ const Confetti = forwardRef(function Confetti(_, ref) {
         ctx.translate(p.x, p.y);
         ctx.rotate((p.rot * Math.PI) / 180);
         ctx.globalAlpha = Math.max(p.life, 0);
+        ctx.shadowBlur = 12;
+        ctx.shadowColor = p.color;
         ctx.fillStyle = p.color;
         ctx.fillRect(-p.size / 2, -p.size / 2, p.size, p.size * 0.6);
         ctx.restore();
       });
+      ctx.shadowBlur = 0;
       piecesRef.current = piecesRef.current.filter((p) => p.life > 0 && p.y < canvas.height + 60);
       raf = requestAnimationFrame(frame);
     }

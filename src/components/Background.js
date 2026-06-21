@@ -11,21 +11,22 @@ export default function Background() {
     let raf;
     let sparks = [];
 
-    const colors = ['#ffc24b', '#ff9e2c', '#ff5d73', '#f5c451'];
+    // neon palette
+    const colors = ['#19f0ff', '#7af6ff', '#ff2bd0', '#a35cff', '#b6ff36'];
 
     function resize() {
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
     }
     function init() {
-      const count = Math.min(40, Math.floor(window.innerWidth / 36));
+      const count = Math.min(54, Math.floor(window.innerWidth / 28));
       sparks = Array.from({ length: count }, () => ({
         x: Math.random() * canvas.width,
         y: Math.random() * canvas.height,
-        r: Math.random() * 2 + 0.5,
-        sp: Math.random() * 0.3 + 0.08,
+        r: Math.random() * 2.2 + 0.5,
+        sp: Math.random() * 0.35 + 0.08,
         dx: Math.random() * 0.4 - 0.2,
-        a: Math.random() * 0.5 + 0.2,
+        a: Math.random() * 0.5 + 0.25,
         c: colors[Math.floor(Math.random() * colors.length)],
         tw: Math.random() * Math.PI * 2,
       }));
@@ -41,8 +42,8 @@ export default function Background() {
         ctx.beginPath();
         ctx.arc(s.x, s.y, s.r, 0, Math.PI * 2);
         ctx.fillStyle = s.c;
-        ctx.globalAlpha = s.a * (0.4 + 0.6 * flicker);
-        ctx.shadowBlur = 8;
+        ctx.globalAlpha = s.a * (0.35 + 0.65 * flicker);
+        ctx.shadowBlur = 14;
         ctx.shadowColor = s.c;
         ctx.fill();
       });
@@ -51,8 +52,9 @@ export default function Background() {
       raf = requestAnimationFrame(frame);
     }
     resize(); init(); frame();
-    window.addEventListener('resize', () => { resize(); init(); });
-    return () => cancelAnimationFrame(raf);
+    const onResize = () => { resize(); init(); };
+    window.addEventListener('resize', onResize);
+    return () => { cancelAnimationFrame(raf); window.removeEventListener('resize', onResize); };
   }, []);
 
   return (
