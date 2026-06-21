@@ -32,7 +32,6 @@ export default function Home() {
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
-  // fire confetti once when finale scrolls into view
   useEffect(() => {
     const el = finaleRef.current;
     if (!el) return;
@@ -63,11 +62,11 @@ export default function Home() {
       <div className="progress"><motion.div className="progress-fill" style={{ scaleX: progress }} /></div>
 
       <nav className={`nav ${solid ? 'solid' : ''}`}>
-        <span className="nav-mark">Pravveen</span>
+        <span className="nav-mark">Papa</span>
         <div className="nav-links">
-          <a href="#journey">Journey</a>
-          <a href="#family">Family</a>
-          <a href="#legacy">Legacy</a>
+          <a href="#story">Story</a>
+          <a href="#photos">Photos</a>
+          <a href="#lessons">Lessons</a>
           <a href="#wishes">Wishes</a>
         </div>
       </nav>
@@ -84,7 +83,7 @@ export default function Home() {
 
           <motion.p className="hero-eyebrow"
             initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
-            today is a special day
+            today is the day
           </motion.p>
           <motion.h1 className="hero-title"
             initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.9, delay: 0.1 }}>
@@ -92,13 +91,13 @@ export default function Home() {
           </motion.h1>
           <motion.p className="hero-sub"
             initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.3 }}>
-            Four-something chapters in, and you’re still writing the best ones.
-            This one’s from all of us — for the man who rebuilt everything,
-            twice, and never once missed a single one of our birthdays.
+            Forty nine years in, and you are still my favourite story to tell. I built
+            this whole thing myself, for the one person who never missed a single
+            moment of mine. This one is from me.
           </motion.p>
           <motion.div className="hero-cta"
             initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.45 }}>
-            <a href="#journey" className="btn btn-primary"><span>Begin the story</span><ArrowDown size={18} /></a>
+            <a href="#story" className="btn btn-primary"><span>Start the story</span><ArrowDown size={18} /></a>
             <a href="#wishes" className="btn btn-ghost">Leave a wish</a>
           </motion.div>
 
@@ -110,48 +109,51 @@ export default function Home() {
           <div className="wrap">
             <motion.p className="letter-text" {...fadeUp}>
               Somewhere between the early mornings, the late flights, and the
-              companies built from nothing, you still showed up for every school
-              play, every holiday, every 2am phone call. We don’t say it enough,
-              so today we’re saying it properly: <em>we see you, we’re proud of
-              you, and we love you.</em>
+              companies you built from nothing, you still showed up for every match,
+              every result, every late night I needed you. I do not say it enough,
+              so today I am saying it properly: <em>I see you, I am proud of you,
+              and I love you.</em>
             </motion.p>
-            <motion.p className="letter-sign" {...fadeUp}>— Anu, Parth, Aryamann &amp; Tvesha</motion.p>
+            <motion.p className="letter-sign" {...fadeUp}>Love, Parth</motion.p>
           </div>
         </section>
 
-        {/* JOURNEY */}
-        <section className="section-pad" id="journey">
+        {/* STORY / TIMELINE */}
+        <section className="section-pad" id="story">
           <div className="wrap">
-            <motion.p className="eyebrow" {...fadeUp}>the thread</motion.p>
-            <motion.h2 className="s-title" {...fadeUp}>One word has carried<br />every <em>single chapter.</em></motion.h2>
+            <motion.p className="eyebrow" {...fadeUp}>the throughline</motion.p>
+            <motion.h2 className="s-title" {...fadeUp}>One word carried<br />every <em>single chapter.</em></motion.h2>
             <motion.p className="s-desc" {...fadeUp}>
-              From a grandfather’s freight business in 1979, through a setback in
-              2008 most people would never recover from, to three companies and a
-              community he still shows up for — here’s the throughline.
+              From my great grandfather&apos;s freight business in 1979, through a year
+              in 2008 that most people would never have come back from, to three
+              companies and a community he still shows up for. Here is the throughline,
+              the way I have watched it my whole life.
             </motion.p>
           </div>
           <Timeline />
         </section>
 
-        {/* FAMILY */}
-        <section className="section-pad" id="family">
+        {/* PHOTOS */}
+        <section className="section-pad" id="photos">
           <div className="wrap">
-            <motion.p className="eyebrow" {...fadeUp}>three decades, in faces</motion.p>
-            <motion.h2 className="s-title" {...fadeUp}>The years, <em>in photographs.</em></motion.h2>
+            <motion.p className="eyebrow" {...fadeUp}>the proof</motion.p>
+            <motion.h2 className="s-title" {...fadeUp}>A life, <em>in motion.</em></motion.h2>
             <motion.p className="s-desc" {...fadeUp}>
-              Prague streets, Rhine waterfalls, Barcelona doorways, Scottish
-              hillsides, a sunrise over the Mara — and somehow you’re smiling in
-              every single one.
+              Rajasthan rooftops, water on every continent, a sunrise on safari, and a
+              hundred ordinary evenings at home. He is smiling in every single one. Here
+              they all are, moving the way the years did. Tap any photo to hold it still.
             </motion.p>
+          </div>
+          <div className="wrap" style={{ maxWidth: '1320px' }}>
             <Gallery />
           </div>
         </section>
 
-        {/* LEGACY */}
-        <section className="section-pad" id="legacy">
+        {/* LESSONS */}
+        <section className="section-pad" id="lessons">
           <div className="wrap">
-            <motion.p className="eyebrow" {...fadeUp}>what we actually learned</motion.p>
-            <motion.h2 className="s-title" {...fadeUp}>Not the polished version.<br /><em>The real one.</em></motion.h2>
+            <motion.p className="eyebrow" {...fadeUp}>what he taught me</motion.p>
+            <motion.h2 className="s-title" {...fadeUp}>Everything I know,<br />I learned <em>watching him.</em></motion.h2>
             <div className="values-grid">
               {values.map((v, i) => (
                 <motion.div className="value-card" key={v.n}
@@ -171,10 +173,10 @@ export default function Home() {
         <section className="section-pad" id="wishes">
           <div className="wrap">
             <motion.p className="eyebrow" {...fadeUp}>शुभकामनाएं</motion.p>
-            <motion.h2 className="s-title" {...fadeUp}>Leave him a <em>birthday wish.</em></motion.h2>
+            <motion.h2 className="s-title" {...fadeUp}>Leave Papa a <em>birthday wish.</em></motion.h2>
             <motion.p className="s-desc" {...fadeUp}>
-              Family, friends, the whole Inland family — write something. It’ll
-              appear here for everyone to see.
+              Family, friends, the whole Inland family. Write him something. It will
+              show up right here for him to read today.
             </motion.p>
             <Wishes onSent={() => confettiRef.current?.burst(window.innerWidth / 2, window.innerHeight / 2, 80)} />
           </div>
@@ -184,9 +186,9 @@ export default function Home() {
         <section className="finale" ref={finaleRef}>
           <Confetti ref={confettiRef} />
           <div className="wrap" style={{ position: 'relative', zIndex: 6 }}>
-            <motion.p className="finale-eyebrow" {...fadeUp}>from all of us, today and always</motion.p>
+            <motion.p className="finale-eyebrow" {...fadeUp}>from me, today and always</motion.p>
             <motion.h2 className="finale-title" {...fadeUp}>Happy Birthday, Papa.</motion.h2>
-            <motion.p className="finale-sub" {...fadeUp}>Here’s to the next chapter — write it the way you always have.</motion.p>
+            <motion.p className="finale-sub" {...fadeUp}>Here is to your next chapter. Write it the way you always have.</motion.p>
             <motion.button className="btn btn-primary" {...fadeUp}
               onClick={() => {
                 const c = finaleRef.current?.querySelector('#confetti');
@@ -197,7 +199,7 @@ export default function Home() {
           </div>
         </section>
 
-        <footer>With love, always. · June 2026</footer>
+        <footer>Made by Parth, with love. June 2026</footer>
       </main>
     </>
   );
