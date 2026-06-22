@@ -42,7 +42,7 @@ export const milestones = [
   {
     year: '2008',
     title: 'A Defining Chapter',
-    body: "I was too young to understand it at the time, but this was one of the most important chapters in Papa's journey. InCity Express was his idea, and when it didn't succeed, he faced a choice: give up or keep going. He chose to keep going. As I've grown older, I've realised that success isn't just about the wins. Sometimes it's about how you respond when things don't go your way. That's a lesson I've learned from watching him.",
+    body: "This all happened before I was even born, but it is one of the most important chapters in Papa's journey, and I have grown up hearing the story. InCity Express was his idea, and when it didn't succeed, he faced a choice: give up or keep going. He chose to keep going. As I've grown older, I've realised that success isn't just about the wins. Sometimes it's about how you respond when things don't go your way. That's a lesson I've learned from watching him.",
     tone: 'rose',
     feature: true,
   },
