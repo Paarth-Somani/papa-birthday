@@ -13,8 +13,8 @@ export const letter = {
 export const milestones = [
   {
     year: '1977',
-    title: 'Sri Dungargarh, Rajasthan',
-    body: 'Long before he became the person I know as Papa, he was a little boy growing up in Sri Dungargarh with Dadu and Maa. This was the beginning of a journey that would eventually bring him to Mumbai, to business, and most importantly, to our family.',
+    title: 'Kolkata, West Bengal',
+    body: 'Long before he became the person I know as Papa, he was a little boy growing up in Kolkata with Dadu and Maa. This was the beginning of a journey that would eventually bring him to Mumbai, to business, and most importantly, to our family.',
     tone: 'gold',
     photo: '2.jpg',
   },
